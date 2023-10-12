@@ -10,7 +10,7 @@ def all_thing_is_obj(object: any) -> int:
     if type(object) is str:
         print("Brian is in the kitchen : ", end='')
     if type(object) is int:
-        print("Type Not Found")
+        print("Type not found")
     else:
         print(type(object))
     return 42
