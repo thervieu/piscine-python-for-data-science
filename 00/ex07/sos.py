@@ -26,7 +26,7 @@ def morse_translator():
     try:
         if len(sys.argv) != 2:
             raise Exception("AssertionError : wrong number of arguments")
-        p = "!\"#$%&'()*+/:;<=>@[\\]^_`{|}~"
+        p = " !\"#$%&'()*+/:;<=>@[\\]^_`{|}~"
         if sum(1 for c in sys.argv[1] if c in p) != 0:
             raise Exception("AssertionError : string is wrong")
         translation = [MORSE_CODE_DICT[c] for c in sys.argv[1].upper()]
