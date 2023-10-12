@@ -16,10 +16,10 @@ def filterstring():
         bacChar = lambda c: c in p != 0 or c.isprintable is False
         if sum(1 for c in sys.argv[1] if bacChar(c)):
             raise Exception("AssertionError : string is wrong")
+        is_min_size = lambda c: len(c) > word_size
+        return print([elt for elt in sys.argv[1].split() if is_min_size(elt)])
     except Exception as e:
         return print(e)
-    is_min_size = lambda c: len(c) > word_size
-    return print([elt for elt in sys.argv[1].split() if is_min_size(elt)])
 
 
 if __name__ == "__main__":
